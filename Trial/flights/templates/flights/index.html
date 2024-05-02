@@ -1,0 +1,21 @@
+{% extends "flights/layout.html" %}
+    {% block title %}
+        FLIGHTS
+    {% endblock %}
+   {% block body %}
+    <div style="padding: 60; text-align: center;">
+            <h2>
+            FLIGHTS
+        </h2>
+        </div>
+        
+        <ul>
+           <div style="padding: 60px;">
+            {% for flight in flights %}
+                <li>
+                   Flight {{ flight.id }} from {{ flight.origin }} to {{ flight.destination }}
+                </li>
+            {% endfor %}
+        </div>
+        </ul>
+    {% endblock %}
