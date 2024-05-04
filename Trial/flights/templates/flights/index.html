@@ -12,8 +12,11 @@
         <ul>
            <div style="padding: 60px;">
             {% for flight in flights %}
+                
                 <li>
+                    <a href="{% url 'flight' flight.id %}">
                    Flight {{ flight.id }} from {{ flight.origin }} to {{ flight.destination }}
+                    </a>
                 </li>
             {% endfor %}
         </div>
